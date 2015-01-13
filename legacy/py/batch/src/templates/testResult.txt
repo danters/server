@@ -1,0 +1,101 @@
+Content-Type: text/plain;charset=utf-8
+
+==========
+==========
+
+Environment: PROD, isDev=False
+=========================================================
+
+Booking number : 1 -----
+{"priceId": 4, "inHandoffTime": "2014-07-12 13:56:52", "cityBlockId": 2, "timeParked": 0.0094444444444444445, "outValetName": "Dante", "customerPersonId": 246, "codeWord": "alumni", "valetPersonId": 4, "longitude": -74.55387302963868, "valetAssigned": {}, "garage": {"name": "Test Princeton Garage", "longitude": -74.637948274612427, "phone": "123-123-1234", "address": "Alexander Road, Princeton, NJ", "latitude": 40.322246165692839, "id": 6}, "state": 9, "estNumHours": 0, "inValetName": "Dante", "latitude": 40.368808732720133, "inValetId": 4, "expectedTime": "7/12/2014 9:57:09 AM", "checkoutAddress": "9 Bernadette Circle, Monmouth Junction", "id": 1, "outHandoffTime": "2014-07-12 13:57:26"}
+
+
+=========================================================
+
+Booking number : 2 -----
+{"cityBlockId": 3, "customerPersonId": 338, "valetPersonId": 9, "longitude": -74.636295626983596, "priceId": 4, "garage": {"name": "Test Princeton Garage", "longitude": -74.637948274612427, "phone": "123-123-1234", "address": "Alexander Road, Princeton, NJ", "latitude": 40.322246165692839, "id": 6}, "state": 8, "estNumHours": 0, "codeWord": "columbia", "latitude": 40.322509697359067, "inValetId": 9, "id": 2}
+
+
+=========================================================
+
+Booking number : 3 -----
+{"priceId": 4, "inHandoffTime": "2014-07-13 19:12:05", "cityBlockId": 2, "timeParked": 0.01, "outValetName": "Dante", "customerPersonId": 246, "codeWord": "wall street", "valetPersonId": "4", "longitude": -74.553174338098117, "valetAssigned": {}, "garage": {"name": "Test Princeton Garage", "longitude": -74.637948274612427, "phone": "123-123-1234", "address": "Alexander Road, Princeton, NJ", "latitude": 40.322246165692839, "id": 6}, "state": 9, "estNumHours": 0, "inValetName": "Dante", "latitude": 40.368905971555847, "inValetId": "4", "expectedTime": "7/13/2014 3:12:26 PM", "checkoutAddress": "9 Bernadette Circle, Monmouth Junction", "id": 3, "outHandoffTime": "2014-07-13 19:12:41"}
+
+
+=========================================================
+
+Booking number : 4 -----
+{"inHandoffTime": "2014-07-13 19:33:14", "cityBlockId": 2, "customerPersonId": "340", "valetPersonId": "4", "longitude": -74.554282852392589, "priceId": 4, "garage": {"name": "Test Princeton Garage", "longitude": -74.637948274612427, "phone": "123-123-1234", "address": "Alexander Road, Princeton, NJ", "latitude": 40.322246165692839, "id": 6}, "state": 3, "estNumHours": 0, "codeWord": "tesla", "latitude": 40.369509036400707, "inValetId": "4", "id": 4}
+
+
+=========================================================
+
+Booking number : 5 -----
+{"priceId": 4, "inHandoffTime": "2014-07-13 19:46:10", "cityBlockId": 2, "timeParked": 0.011944444444444445, "outValetName": "Dante", "customerPersonId": 246, "codeWord": "bonds", "valetPersonId": 4, "longitude": -74.553300870639021, "valetAssigned": {}, "garage": {"name": "Test Princeton Garage", "longitude": -74.637948274612427, "phone": "123-123-1234", "address": "Alexander Road, Princeton, NJ", "latitude": 40.322246165692839, "id": 6}, "state": 9, "estNumHours": 0, "inValetName": "Dante", "latitude": 40.368976261951126, "inValetId": 4, "expectedTime": "7/13/2014 3:46:34 PM", "checkoutAddress": "9 Bernadette Circle, Monmouth Junction", "id": 5, "outHandoffTime": "2014-07-13 19:46:53"}
+
+
+=========================================================
+
+Booking number : 6 -----
+{"cityBlockId": 3, "customerPersonId": 338, "valetPersonId": "9", "longitude": -74.636359999999968, "priceId": 4, "garage": {"name": "Test Princeton Garage", "longitude": -74.637948274612427, "phone": "123-123-1234", "address": "Alexander Road, Princeton, NJ", "latitude": 40.322246165692839, "id": 6}, "state": 8, "estNumHours": 0, "codeWord": "gangnam", "latitude": 40.322386999999999, "inValetId": "9", "id": 6}
+
+
+=========================================================
+
+Booking number : 7 -----
+{"cityBlockId": 4, "customerPersonId": 343, "valetPersonId": 6, "longitude": -73.987686596879726, "priceId": 4, "garage": {"name": "iPark 215 24th", "longitude": -73.981543299999998, "phone": "+1-212-696-460", "address": "215 E 24th st Garage between 2nd and 3rd ave", "latitude": 40.739182599999999, "id": 7}, "state": 1, "estNumHours": 0, "codeWord": "hollywood", "latitude": 40.741190856604348, "inValetId": 6, "id": 7}
+
+
+=========================================================
+
+Booking number : 8 -----
+{"cityBlockId": 3, "customerPersonId": "345", "valetPersonId": "9", "longitude": -74.636359999999968, "priceId": 4, "garage": {"name": "Test Princeton Garage", "longitude": -74.637948274612427, "phone": "123-123-1234", "address": "Alexander Road, Princeton, NJ", "latitude": 40.322246165692839, "id": 6}, "state": 1, "estNumHours": 0, "codeWord": "big apple", "latitude": 40.322386999999999, "inValetId": "9", "id": 8}
+
+
+==========
+==========
+
+=========================================================
+
+Valet number : 4 -----
+{"firstName": "Dante", "personId": "4", "bookingId": 0, "longitude": -74.635302443126818, "mobile": "+17328229112", "state": 0, "codeWord": "", "latitude": 40.322810355611445}
+
+
+=========================================================
+
+Valet number : 6 -----
+{"firstName": "Eric", "personId": 6, "bookingId": 7, "rate": 0, "longitude": -73.988088341498724, "mobile": "+13474534632", "state": 1, "codeWord": "hollywood", "latitude": 40.741131277792846}
+
+
+=========================================================
+
+Valet number : 9 -----
+{"firstName": "Yousef", "personId": "9", "bookingId": 8, "rate": 0, "longitude": -74.636359999999968, "mobile": "1231231234", "state": 1, "codeWord": "big apple", "latitude": 40.322386999999999}
+
+
+==========
+==========
+
+=========================================================
+
+Customer number : 246 -----
+{"carId": 31, "firstName": "", "personId": 246, "bookingId": 5, "longitude": -74.552753699999982, "mobile": "7328229112", "state": 9, "latitude": 40.368583899999997}
+
+
+=========================================================
+
+Customer number : 269 -----
+{"carId": 2, "firstName": "first", "personId": 269, "bookingId": 0, "longitude": 0, "mobile": "123", "latitude": 0}
+
+
+=========================================================
+
+Customer number : 293 -----
+{"firstName": "Cankut", "personId": 293, "bookingId": 0, "longitude": 0, "mobile": "+905350172278", "latitude": 0}
+
+
+=========================================================
+
+Customer number : 298 -----
+{"firstName": "", "personId": 298, "bookingId": 0, "longitude": 0, "mobile": "917897208752", "latitude": 0}
+

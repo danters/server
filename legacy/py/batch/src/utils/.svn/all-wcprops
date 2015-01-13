@@ -1,0 +1,311 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/vany-mobile-web/!svn/ver/924/trunk/batch/src/utils
+END
+changeInTimeBooking.py
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/vany-mobile-web/!svn/ver/824/trunk/batch/src/utils/changeInTimeBooking.py
+END
+manualCreateBooking.py
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/vany-mobile-web/!svn/ver/848/trunk/batch/src/utils/manualCreateBooking.py
+END
+stop.sh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/vany-mobile-web/!svn/ver/699/trunk/batch/src/utils/stop.sh
+END
+clearVaultBooking.py
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/utils/clearVaultBooking.py
+END
+startAll.sh
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/vany-mobile-web/!svn/ver/924/trunk/batch/src/utils/startAll.sh
+END
+showValet.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/vany-mobile-web/!svn/ver/879/trunk/batch/src/utils/showValet.py
+END
+checkToken.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/vany-mobile-web/!svn/ver/719/trunk/batch/src/utils/checkToken.py
+END
+reassignVault.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/utils/reassignVault.py
+END
+manualResetBooking.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/vany-mobile-web/!svn/ver/880/trunk/batch/src/utils/manualResetBooking.py
+END
+scrubPersons.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/vany-mobile-web/!svn/ver/607/trunk/batch/src/utils/scrubPersons.py
+END
+unbookValet.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/vany-mobile-web/!svn/ver/909/trunk/batch/src/utils/unbookValet.py
+END
+assignBookingToValet.py
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/vany-mobile-web/!svn/ver/879/trunk/batch/src/utils/assignBookingToValet.py
+END
+updateVaultState.py
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/utils/updateVaultState.py
+END
+updateValet.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/utils/updateValet.py
+END
+r.sh
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/vany-mobile-web/!svn/ver/699/trunk/batch/src/utils/r.sh
+END
+clearCityBlocksCache.py
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/vany-mobile-web/!svn/ver/824/trunk/batch/src/utils/clearCityBlocksCache.py
+END
+clearSingleBooking.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/vany-mobile-web/!svn/ver/607/trunk/batch/src/utils/clearSingleBooking.py
+END
+readPersonTasks.py
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/vany-mobile-web/!svn/ver/848/trunk/batch/src/utils/readPersonTasks.py
+END
+reassign.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/vany-mobile-web/!svn/ver/916/trunk/batch/src/utils/reassign.py
+END
+cancelBooking.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/vany-mobile-web/!svn/ver/656/trunk/batch/src/utils/cancelBooking.py
+END
+carParked.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/utils/carParked.py
+END
+showBooking.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/vany-mobile-web/!svn/ver/824/trunk/batch/src/utils/showBooking.py
+END
+showCustomer.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/vany-mobile-web/!svn/ver/848/trunk/batch/src/utils/showCustomer.py
+END
+manualCharge.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/vany-mobile-web/!svn/ver/824/trunk/batch/src/utils/manualCharge.py
+END
+manualConvertAdvanceTask.py
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/vany-mobile-web/!svn/ver/848/trunk/batch/src/utils/manualConvertAdvanceTask.py
+END
+manualValetAssign.py
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/vany-mobile-web/!svn/ver/824/trunk/batch/src/utils/manualValetAssign.py
+END
+changeGarage.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/utils/changeGarage.py
+END
+start.sh
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/vany-mobile-web/!svn/ver/699/trunk/batch/src/utils/start.sh
+END
+clearCreditCard.py
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/vany-mobile-web/!svn/ver/824/trunk/batch/src/utils/clearCreditCard.py
+END
+kickOffValetAssign.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/vany-mobile-web/!svn/ver/824/trunk/batch/src/utils/kickOffValetAssign.py
+END
+clearDante.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/vany-mobile-web/!svn/ver/824/trunk/batch/src/utils/clearDante.py
+END
+showVault.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/utils/showVault.py
+END
+clearDSValet.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/vany-mobile-web/!svn/ver/824/trunk/batch/src/utils/clearDSValet.py
+END
+clearSingleCustomer.py
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/vany-mobile-web/!svn/ver/552/trunk/batch/src/utils/clearSingleCustomer.py
+END
+stopAll.sh
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/vany-mobile-web/!svn/ver/698/trunk/batch/src/utils/stopAll.sh
+END
+clearCustomerBooking.py
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/utils/clearCustomerBooking.py
+END
+changeValetPhone.py
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/vany-mobile-web/!svn/ver/838/trunk/batch/src/utils/changeValetPhone.py
+END
+showCard.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/vany-mobile-web/!svn/ver/848/trunk/batch/src/utils/showCard.py
+END
+forceOfflineAllValets.py
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/vany-mobile-web/!svn/ver/824/trunk/batch/src/utils/forceOfflineAllValets.py
+END
+reassignOut.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/vany-mobile-web/!svn/ver/916/trunk/batch/src/utils/reassignOut.py
+END
+needleBooking.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/vany-mobile-web/!svn/ver/848/trunk/batch/src/utils/needleBooking.py
+END
+changeBookingState.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/vany-mobile-web/!svn/ver/838/trunk/batch/src/utils/changeBookingState.py
+END
+restartAll.sh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/vany-mobile-web/!svn/ver/698/trunk/batch/src/utils/restartAll.sh
+END
+manualCreateAdvanceTask.py
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/vany-mobile-web/!svn/ver/863/trunk/batch/src/utils/manualCreateAdvanceTask.py
+END
+manualUpdatePaymentInfo.py
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/vany-mobile-web/!svn/ver/863/trunk/batch/src/utils/manualUpdatePaymentInfo.py
+END
+needleCustomerPhone.py
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/vany-mobile-web/!svn/ver/863/trunk/batch/src/utils/needleCustomerPhone.py
+END
+cancelVaultBooking.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/utils/cancelVaultBooking.py
+END
+forceClearCache.py
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/vany-mobile-web/!svn/ver/719/trunk/batch/src/utils/forceClearCache.py
+END
+cancelTask.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/vany-mobile-web/!svn/ver/863/trunk/batch/src/utils/cancelTask.py
+END
+clearSingleValet.py
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/utils/clearSingleValet.py
+END
+manualCompleteBooking.py
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/vany-mobile-web/!svn/ver/865/trunk/batch/src/utils/manualCompleteBooking.py
+END

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ValetAnywhere</title>
+	
+<link rel="stylesheet" type="text/css"
+href="http://www.valetanywhere.com/css/email.css" />
+
+</head>
+ 
+<body bgcolor="#FFFFFF">
+
+<div style="margin:20px;">
+<pre>
+Hi %s,
+
+Thanks for signing up to ValetAnywhere Vault, monthly storage for your ride. With ValetAnywhere, you get the convenience of valet with your monthly parking.
+ 
+YOUR FIRST VALET CAR PICKUP (our valet comes to you):
+Pickup Location: %s
+Pickup Time: %s
+ 
+Your valet will meet and greet you at the time and place you picked. Please do have your SpotHero reservation number ready when you meet your valet.
+ 
+If you changed your mind, just give us a call at 646-481-2212 or use our web site to reschedule.
+
+GET YOUR CAR BACK (where & when you need it)
+Simply tell us when and where (if it isn’t in front of your apartment) you need us to pickup or return your car, and we will be there. You have 3 options to do this:
+
+   1. Via iPhone app - just download it from www.valetanywhere.com/app and sign-in with your credentials and schedule your car return. (With our VA App, you can see your car in transition, so you never wonder how long you will need to wait for your car.)
+   2. Via the Web - just login to www.valetanywhere.com/nyc-monthly-parking and you can summon your car back.
+   3. Call our support - call us at 646-481-2212 and we’ll take care of it
+  
+PAYMENT
+Your payment of $%s is billed monthly on the %sth of each month. If you have any questions, please contact valetsupport@valetanywhere.com
+ 
+Thanks for being our customer, we look forward to serve you.
+ 
+The ValetAnywhere Team
+
+
+</pre>
+</div>
+</body>
+</html>

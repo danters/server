@@ -1,0 +1,15 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+import sys
+sys.path.insert(0, "/srv/www/devweb/batch")
+import urllib
+import json
+
+googleGeocodeUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=40.747439,-73.972444&sensor=true_or_false"
+res = urllib.urlopen(googleGeocodeUrl)
+print str(res)
+
+j = json.load(res)
+jAddr = j["results"][0]
+addr = jAddr["formatted_address"]
+print addr

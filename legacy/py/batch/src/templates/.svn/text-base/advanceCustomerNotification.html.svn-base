@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ValetAnywhere</title>
+	
+<style>
+@font-face {
+    font-family: "VAFont";
+    src: url(http://valetanywhere.com/fonts/BrandonGrotesque-Regular.otf) format("truetype");
+}
+
+.body-wrap {background-color: white;}
+    
+    
+html, body, pre{
+  padding:0;
+  margin:0;
+  font-family:VAFont, Verdana, Tahoma;
+}
+
+*{
+  box-sizing:border-box;
+}
+.table {
+  display:table;
+  margin:0 auto;
+  min-width:100%
+}
+#navBar, #right, #left {
+  height:100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 80%;
+  background:gray;
+  display:table-cell;
+  vertical-align:middle;
+ }
+#right, #left {
+  width:40px;
+}
+
+#navBar > div {
+    margin-top: 1em;
+    text-align:left;
+    font-size:20px;
+    width: 100%;
+    height: 100%;
+    float:left;
+    border: 1px solid gray;
+    border-radius:5px;
+}    
+
+.borderedTable {
+    border-collapse: collapse;
+}
+
+.borderedTable tr td {
+    border: 1px solid gray;
+    padding: .5em;
+}
+.trHeader {font-weight: bold;}
+</style>
+</head>
+ 
+<body bgcolor="gray">
+
+
+<!-- BODY -->
+
+<div class="table">
+  <div id="left"></div>
+  <div id="navBar">
+    <div>
+      <div style="height:100%;width:100%;background:white;padding:5px;border-radius:10px">
+            <table class="body-wrap" width="100%">
+                <tr>
+                        <td width="1%"><img src="http://valetanywhere.com/assets/img/vaLogo.png" style="width:50px;height:50px;"/>
+                            </td>
+                        <td align="left" width="99%"><span style="font-size: 1.5em;">Valet Anywhere</span><br/><span style="font-size: 1em;">Let us park your car for you, wherever you go</span></td>
+                </tr>
+                <tr><td colspan="2" width="100%"><hr/></td></tr>
+                <tr>
+                    <td colspan="2" >
+                        
+<pre>
+
+Hi #VANY#,
+
+Thanks for booking a valet parking with us. Your valet will #VANY#:
+
+Location: <b>#VANY#</b>
+Time: <b>#VANY#</b>
+
+If you change your mind, use the mobile app or use our <a href="http://valetanywhere.com/nyc-advance-parking">web site</a> to reschedule.
+
+Thanks for being our customer, we look forward to serving you.
+
+The ValetAnywhere Team
+
+</pre>
+                    </td>
+                </tr>
+            </table>
+      </div>
+    </div>
+  </div>
+  <div id="right"></div>
+</div>
+
+
+
+<!-- /BODY -->
+
+</body>
+</html>

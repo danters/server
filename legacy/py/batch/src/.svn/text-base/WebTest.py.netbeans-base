@@ -1,0 +1,102 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+import tornado.ioloop
+import tornado.httpserver
+import tornado.web
+import json
+import HCommon
+import HBook
+import HValet
+import HCustomer
+import sys
+import traceback
+
+from time import gmtime, strftime
+from tornado.options import define, options, parse_command_line
+from tornado import escape
+import resource
+
+def writeLog(msg):
+    tm = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+    print tm + " - " + msg
+    sys.stdout.flush()
+
+writeLog("REST Server starting....")
+
+
+class RestHandler(tornado.web.RequestHandler):
+    #@tornado.web.asynchronous
+    def post(self):
+        """Post new data to our rest service as a JSON"""
+        function=self.get_argument("function", None, True)
+        app=self.get_argument("app", None, True)
+        
+        j = self.json_args
+        writeLog(app + ", " + function + ": " + str(self.json_args))
+        
+        ret = {}
+
+        sRet="Request for " + function + " unsupported"
+        if len(ret) > 0:
+            sRet = json.dumps(ret)
+    
+        sRet = json.dumps(j)
+        self.set_header("Content-Type", "text/plain; charset=utf-8")
+        self.set_header("Access-Control-Allow-Origin", "*")
+        self.set_header('Access-Control-Allow-Headers', 'accept, origin, x-requested-with, x-csrftoken, content-type, email, personId, authToken')
+        
+        self.set_status(200)
+        self.write(sRet)
+
+    def get(self):
+        """Post new data to our rest service as a JSON"""
+        function=self.get_argument("function", None, True)
+        app=self.get_argument("app", None, True)
+        
+        j = self.json_args
+        writeLog(app + ", " + function + ": " + str(self.json_args))
+        
+        ret = {}
+
+#        sRet="Request for " + function + " unsupported"
+        if len(ret) == 0:
+#            sRet = json.dumps(ret)
+            sRet = json.dumps(j)
+    
+        sRet = json.dumps(j)
+        self.set_header("Content-Type", "text/plain; charset=utf-8")
+        self.set_header("Access-Control-Allow-Origin", "*")
+        self.set_header('Access-Control-Allow-Headers', 'accept, origin, x-requested-with, x-csrftoken, content-type, email, personId, authToken')
+        
+        self.set_status(200)
+        self.write(sRet)
+
+    def options(self):
+        self.set_header("Content-Type", "application/json")
+        self.set_header("Access-Control-Allow-Origin", "*")
+        self.set_header('Access-Control-Allow-Headers', 'accept, origin, x-requested-with, x-csrftoken, content-type, email, personId, authToken')
+        
+        self.set_status(200)
+        
+    def prepare(self):
+        try:
+            if self.request.headers["Content-Type"].startswith("application/json"):
+                self.json_args = json.loads(self.request.body)
+            else:
+                self.json_args = None
+        
+        except:
+            self.json_args = None
+
+
+
+svr = tornado.httpserver.HTTPServer(tornado.web.Application([
+    (r"/rest", RestHandler),
+]))
+
+svr.bind(8888)
+svr.start(0)  # Forks multiple sub-processes
+
+#svr.listen(8888)
+tornado.ioloop.IOLoop.instance().start()
+    

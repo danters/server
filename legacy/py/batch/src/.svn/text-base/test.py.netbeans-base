@@ -1,0 +1,15 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+import HCommon
+import HBook
+import HValet
+import HCustomer
+import json
+
+js = '{"car":{"year":"","color":"dirty","plate":"","make":"volvo","model":"estate","personId":0,"isNew":false,"carId":0,"returnCode":0},"email":"haemishg+3902@gmail.com","firstName":"aaaaa","lastName":"","mobile":"06792000202","password":"aaaaa","referredByCode":""}'
+
+j = json.loads(js)
+
+ret = HCustomer.signup(j)
+
+print str(ret)

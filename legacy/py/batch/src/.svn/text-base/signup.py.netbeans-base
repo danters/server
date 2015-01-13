@@ -1,0 +1,19 @@
+#!/usr/bin/python
+import HCommon
+import HCustomer
+import AWSEmail
+import twilioPack
+import json
+import sys, traceback
+
+print "Content-Type: text/plain;charset=utf-8"
+print
+
+try:
+        mobile = '7328229112'
+        twilioPack.sendWelcomeLink(mobile)
+	print "yo"
+except:
+	print HCommon.setError(1,"Invalid Mobile Number")
+	
+	

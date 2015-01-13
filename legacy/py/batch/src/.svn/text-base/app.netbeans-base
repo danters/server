@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="On-Demand NYC Valet Parking via ValetAnywhere"/>
+        <meta name="keywords" content="on-demand valet parking, nyc parking, manhattan parking, midtown parking, chelsea parking, soho parking, rockefeller center parking, theater district parking, nyc parking app, ValetAnywhere" />
+        <meta name="author" content="ValetAnywhere"/>
+        <meta property="twitter:account_id" content="4503599630186793"/>
+
+        <title>On-demand Valet Service</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/agency.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<!--        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+       
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script> 
+        $(function(){
+          $("#header").load("header.html"); 
+          $("#footer").load("footer.html"); 
+        });
+        </script> 
+        <style>
+            header {
+                background-image: url(img/bg.jpg);
+            }
+            .InIPhone {display:none;}
+            .InAndroid {display:none;}
+            .NotIPhone {}
+        </style>
+        
+    </head>
+
+    <body id="page-top" class="index">
+
+        
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="index.html"><div class="logo"></div></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        
+                        
+                    </ul>
+                       
+                </div>
+                
+                
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+     
+
+       <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="intro-text" style="position: relative;">
+                    <div class="intro-heading">VALET</br>ANYWHERE<hr></div>
+                    <div class="NotIPhone">
+                        <div class="intro-lead-in">DOWNLOAD TO JOIN</br>NEW WAY TO PARK AND BE FREE</div>
+                        
+                        <a href="https://itunes.apple.com/us/app/id905940871?mt=8" class="btn btn-default"><i class="fa fa-apple fa-lg"></i>  DOWNLOAD for iPhone</a>
+                        <br>
+                        <br>
+                        <a href="https://play.google.com/store/apps/details?id=com.valetanywhere.app" class="btn btn-default"><i class="fa fa-android fa-lg"></i>  DOWNLOAD for Android</a>
+                    </div>
+                    <div class="InIPhone">
+                        <div class="intro-lead-in">Loading App Store, Please Wait...</br></div>
+                    </div>
+                    <div class="InAndroid">
+                        <div class="intro-lead-in">Loading Google Play Store, Please Wait...</br></div>
+                    </div>
+                </div>
+                <div class="intro-footing">On-Demand Valet Parking</div>
+            </div>
+        </header>
+
+        <div id="footer"></div>
+        
+        <script>
+            $( document ).ready(function() {
+                               
+                if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1)) {
+                    $(".InIPhone").show();
+                    $(".InAndroid").hide();
+                    $(".NotIPhone").hide();
+                    setTimeout(startDownload,300);
+                }else if((navigator.userAgent.toLowerCase().indexOf('android') != -1)){
+                    $(".InAndroid").show();
+                    $(".InIPhone").hide();
+                    $(".NotIPhone").hide();
+                    setTimeout(startDownloadDroid,300);
+                }
+            });
+            
+            function startDownload() {
+                    document.location = "https://itunes.apple.com/us/app/id905940871?mt=8";
+            }
+            
+            function startDownloadDroid(){
+                    document.location = "https://play.google.com/store/apps/details?id=com.valetanywhere.app";
+            }
+        </script>
+    </body>
+
+</html>

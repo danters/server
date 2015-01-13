@@ -1,0 +1,63 @@
+#!/usr/bin/python
+import smtplib
+import socket
+
+hostname= socket.gethostname()
+ip=socket.gethostbyname(hostname)
+
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
+def sendemail(a_recipient, a_subject, a_body):
+    try:
+
+	# me == my email address
+	# you == recipient's email address
+	me = "noreply@valetanywhere.com"
+	you = a_recipient
+	bcc = "valetsupport@valetanywhere.com"
+        
+	#bcc = "dantesarigumba@yahoo.com"
+
+	# Create message container - the correct MIME type is multipart/alternative.
+	msg = MIMEMultipart('alternative')
+	msg['Subject'] = a_subject
+	msg['From'] = me
+	msg['To'] = you
+	msg['Ccc'] = bcc
+
+	text = a_body
+	html = """\
+	<html>
+	<head></head>
+  		<body>
+    		<p>
+    		%s
+		</p>
+  		</body>
+	</html>
+	""" %a_body
+	# Record the MIME types of both parts - text/plain and text/html.
+	part1 = MIMEText(text, 'plain')
+	part2 = MIMEText(html, 'html')
+
+	# Attach parts into message container.
+	# According to RFC 2046, the last part of a multipart message, in this case
+	# the HTML message, is best and preferred.
+	msg.attach(part1)
+	msg.attach(part2)
+
+	# Send the message via local SMTP server.
+	#s = smtplib.SMTP('localhost')
+	s = smtplib.SMTP('email-smtp.us-east-1.amazonaws.com', 587)
+	s.starttls()
+	s.login('AKIAIU7FFWAPK5T3N7IQ','Ai+MAyXzWU2rFbuEAKUBpKY+fETDljCkeNpyavEB32I4')
+
+	# sendmail function takes 3 arguments: sender's address, recipient's address
+	# and message to send - here it is sent as one string.
+	s.sendmail(me, [you, bcc], msg.as_string())
+	s.close()
+
+    except:
+        return
+        

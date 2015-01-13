@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/vany-mobile-web/!svn/ver/925/trunk/batch/src/testScripts
+END
+test.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/vany-mobile-web/!svn/ver/927/trunk/batch/src/testScripts/test.py
+END
+testCache.py
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/testScripts/testCache.py
+END
+migrateBooking.py
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/vany-mobile-web/!svn/ver/925/trunk/batch/src/testScripts/migrateBooking.py
+END
+showActiveBookings.py
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/vany-mobile-web/!svn/ver/898/trunk/batch/src/testScripts/showActiveBookings.py
+END
+testAddressLookup.py
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/testScripts/testAddressLookup.py
+END
+testEmail.py
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/testScripts/testEmail.py
+END
+testVaultCoverage.py
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/testScripts/testVaultCoverage.py
+END

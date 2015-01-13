@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ValetAnywhere</title>
+	
+<link rel="stylesheet" type="text/css"
+href="http://www.valetanywhere.com/css/email.css" />
+
+</head>
+ 
+<body bgcolor="#FFFFFF">
+
+
+<!-- BODY -->
+<table class="body-wrap">
+	<tr>
+		<td></td>
+		<td class="container" bgcolor="#FFFFFF">
+
+			<div class="content">
+			<table>
+				<tr>
+					<td>
+						<h3>Change ValetAnywhere Password!</h3>
+						<p class="lead">To change your password, please click or open this link on your web browser: 
+						<a href="http://54.191.94.243//pwdChange.html?email=%s&tok=%s">http://54.191.94.243/pwdChange.html?email=%s&tok=%s</a>
+</p>
+
+						<p><strong>Contact
+Us</strong><br />
+If you have any questions, please email us at support@valetanywhere.com or
+call us at (917) 720-8257</p>
+						<p>- The ValetAnywhere Team</p>
+					</td>
+				</tr>
+			</table>
+			</div><!-- /content -->
+									
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /BODY -->
+
+
+</body>
+</html>

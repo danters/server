@@ -1,0 +1,202 @@
+#!/usr/bin/python
+import HCommon
+import HCustomer
+import HValet
+import HBook
+import memcache
+import uuid
+import json
+import sys, traceback
+
+def setAdminToken(personId, lastName, firstName, mobile):
+	key = "ADMIN_CRED_" + str(personId)
+	token = uuid.uuid4()
+	
+	userData = {}
+	userData['returnCode'] = 0 
+	userData['personId'] = personId
+	userData['lastName'] = lastName
+	userData['firstName'] = firstName
+	userData['mobile'] = mobile
+	userData['authToken'] = str(token)
+	saveData = json.dumps(userData)
+	HCommon.setCacheValue(key,saveData)
+	
+	return userData
+
+def getAndValidateAdminCred(personId, email, authToken):
+	key = "ADMIN_CRED_" + str(personId)
+	userData = HCommon.getCacheValueJson(key)
+
+	if userData is None:
+            return None
+		
+	if authToken != userData["authToken"]:
+            return None
+		
+	return userData
+	
+def login(j):
+    email = j["email"]
+    password = j["password"]
+    row = HCommon.execProcOneRow("call ReadAdmin(%s,%s)", (email,password))
+
+    if row is None:
+        return HCommon.setErrorJson(2,"Email address or password not found")
+    else:
+        return setAdminToken(row[0], row[1], row[2], row[3])
+	
+def validateToken(environ):
+    sPersonId = str(environ["Personid"])
+    personId = int(sPersonId)
+    authToken = environ["Authtoken"]
+    email = environ["Email"]
+
+    valet = getAndValidateAdminCred(personId, email, authToken)
+    if valet is None:
+        return HCommon.setErrorJson(1,"Invalid Credentials or Expired Token")
+    else:
+        return valet
+        
+def readAdminInfo():
+    ret = HCommon.getSuccessReturn()
+
+    i = 1
+
+    customerIds = []
+    bookings = []
+    valets = []
+    customers = []
+    for i in range(0, 400):
+            booking = HBook.getBooking(i)
+            if booking is not None:
+                bookings.append(booking)
+                customerId = booking["customerPersonId"]
+                customerIds.append(customerId)
+
+    for i in range(0,50):
+            valet = HValet.getValet(i)
+            if valet is not None:
+                valets.append(valet)
+                
+    for cId in customerIds:
+        customer = HCustomer.getCustomer(cId)
+        if customer is not None:
+            customers.append(customer)
+
+    ret["bookings"] = bookings
+    ret["valets"] = valets
+    ret["customers"] = customers
+    return ret
+
+def addUpdateGarage(j):
+    cbId = j["cbId"]
+    id = j["id"]
+    name = j["name"]
+    lat = j["lat"]
+    lng = j["lng"]
+    phone = j["phone"]
+    address = j["address"]
+    allowVault = j["allowVault"]
+    cityCode = "NYC"
+    
+    if id==0:
+        row = HCommon.execProcOneRow("call CreateCityBlockGarage(%s,%s,%s,%s,%s,%s,%s,%s)", (str(cbId),cityCode,name,str(lat),str(lng),address,phone,str(allowVault)))
+        j["returnCode"] = 0
+        j["id"] = row[0]
+        return j
+    else:
+        row = HCommon.execProcOneRow("call UpdateGarage(%s,%s,%s,%s,%s,%s,%s,%s)", (str(id),cityCode,name,str(lat),str(lng),address,phone,str(allowVault)))
+        return HCommon.getSuccessReturn()
+
+def deleteGarage(j):
+    id = j["id"]      
+    if int(id)==0:        
+        print "Attempting to delete Garage Id: 0"
+    else:        
+        row = HCommon.execProcOneRow("call DeleteGarage(%s)", str(id))
+        return HCommon.getSuccessReturn()
+
+def addUpdateValetEmployee(j):
+    id = j["id"]
+    firstName = j["firstName"]
+    lastName = j["lastName"]
+    email = j["email"]
+    phone = j["phone"]
+    address = j["address"]
+    city = j["city"]
+    state = j["state"]
+    zip = j["zip"]
+    roleCode = j["roleCode"] 
+    active = j["active"]    
+    if int(id)==0:        
+        password = j["password"]    
+        row = HCommon.execProcOneRow("call CreateValetEmployee(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (firstName,lastName,email, phone, address,city,state,str(zip),roleCode,str(active),password))        
+        j["returnCode"] = 0
+        j["id"] = row[0]        
+        return j
+    else:        
+        row = HCommon.execProcOneRow("call UpdateValetEmployee(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (str(id),firstName,lastName,email, phone, address,city,state,str(zip),roleCode,str(active)))
+        return HCommon.getSuccessReturn()
+
+def deleteValetEmployee(j):
+    id = j["id"]      
+    if int(id)==0:        
+        print "Attempting to delete ValetEmployee Id: 0"
+    else:        
+        row = HCommon.execProcOneRow("call DeleteValetEmployee(%s)", str(id))
+        return HCommon.getSuccessReturn()
+
+def assignValetToVaultTask(j):
+    taskId = j["taskId"]
+    personId = j["customerPersonId"]
+    taskType = j["taskType"]
+    lat = j["lat"]
+    lng = j["lng"]
+    valetId = j["valetPersonId"]
+    carId = j["carId"]
+    garageId = j["garageId"]
+    
+    print "vault task for personId " + str(personId)
+
+    assignedValet = HValet.getValet(valetId)
+
+    if assignedValet is None:        
+        return HCommon.setErrorJson(6,"The valet you assigned to needs to login to the system first.")
+    else:
+        if assignedValet["state"]==HValet.VALET_STATE_BOOKED:
+            return HCommon.setErrorJson(501,"Valet has active booking")
+        else:
+            # need to assign a free vault valet
+            booking = HBook.manualCreateBookingFromVaultTask(taskType,taskId,personId,lat,lng,valetId,carId,garageId,assignedValet)
+            ret = HCommon.getSuccessReturn()
+            ret["booking"] = booking
+            return ret
+            
+def reassignValetToVaultTask(j):
+    taskId = j["taskId"]
+    personId = j["customerPersonId"]
+    taskType = j["taskType"]
+    lat = j["lat"]
+    lng = j["lng"]
+    valetId = j["valetPersonId"]
+    carId = j["carId"]
+    garageId = j["garageId"]
+    
+    print "vault task for personId " + str(personId)
+
+    assignedValet = HValet.getValet(valetId)
+
+    if assignedValet is None:        
+        return HCommon.setErrorJson(6,"The valet you assigned to needs to login to the system first.")
+    else:
+        if assignedValet["state"]==HValet.VALET_STATE_BOOKED:
+            return HCommon.setErrorJson(501,"Valet has active booking")
+        else:
+            booking = HBook.manualUpdateBookingFromVaultTask(taskId,valetId)
+            ret = HCommon.getSuccessReturn()
+            ret["booking"] = booking
+            return ret
+            
+    
+    

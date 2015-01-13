@@ -1,0 +1,41 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+import HCommon
+import HBook
+import HValet
+import HCustomer
+import json
+
+def processVaultTasks():
+    tasks=HCommon.execProcManyRow("call ReadVaultTasks()",())
+
+    if tasks is None:
+        print "No vault tasks to process"
+        return
+    
+    for task in tasks:
+        taskId = task[0]
+        personId = task[1]
+        taskType = task[2]
+        taskTime = task[3]
+        lat = task[4]
+        lng = task[5]
+        state = task[6]
+        valetId = task[7]
+        carId = task[8]
+        firstName = task[9]
+        make = task[10]
+        model = task[11]
+        color = task[12]
+        garageId = task[13]
+
+        print "vault task for personId " + str(personId)
+
+        # need to assign a free vault valet
+        booking = HBook.createBookingFromVaultTask(taskType,taskId,personId,lat,lng,valetId,carId,garageId)
+
+        if booking is not None:
+            print "new booking created from a vault task: " + str(booking)
+            
+            
+processVaultTasks()

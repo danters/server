@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/vany-mobile-web/!svn/ver/926/trunk/batch/src
+END
+nightlyReminder.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/nightlyReminder.py
+END
+HWsServer.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/vany-mobile-web/!svn/ver/916/trunk/batch/src/HWsServer.py
+END
+HAdmin.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/vany-mobile-web/!svn/ver/924/trunk/batch/src/HAdmin.py
+END
+HCustomer.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/vany-mobile-web/!svn/ver/927/trunk/batch/src/HCustomer.py
+END
+nightly.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/vany-mobile-web/!svn/ver/658/trunk/batch/src/nightly.py
+END
+twilioPack.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/vany-mobile-web/!svn/ver/880/trunk/batch/src/twilioPack.py
+END
+HCommon.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/vany-mobile-web/!svn/ver/900/trunk/batch/src/HCommon.py
+END
+messageClient.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/messageClient.py
+END
+HBook.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/vany-mobile-web/!svn/ver/922/trunk/batch/src/HBook.py
+END
+sslRest.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/vany-mobile-web/!svn/ver/885/trunk/batch/src/sslRest.py
+END
+AWSEmail.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/AWSEmail.py
+END
+HRest.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/vany-mobile-web/!svn/ver/915/trunk/batch/src/HRest.py
+END
+HValet.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/vany-mobile-web/!svn/ver/893/trunk/batch/src/HValet.py
+END
+sslWS.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/vany-mobile-web/!svn/ver/916/trunk/batch/src/sslWS.py
+END
